@@ -9,8 +9,8 @@ type DefaultMessage struct {
 type RealtimeAttLogMessage struct {
 	DefaultMessage
 	Data struct {
-		Pin      string `json:"pin"`
-		ScanDate string `json:"scan_date"`
+		Pin  string `json:"pin"`
+		Scan string `json:"scan"`
 		//Verifikasi saat user scan di mesin absensi. 1: finger, 2: password, 3:
 		//card, 4: face, 5: gps, 6:vein
 		Verify int `json:"verify"`
