@@ -33,3 +33,7 @@ type GetUserInfoResponse struct {
 type SetUserInfoResponse struct {
 	DefaultResponseField
 }
+
+type DeleteUserInfoResponse struct {
+	DefaultResponseField
+}

@@ -28,3 +28,8 @@ type SetUserInfoRequest struct {
 	DefaultField
 	Data setUserData `json:"data"`
 }
+
+type DeleteUserInfoRequest struct {
+	DefaultField
+	Pin string `json:"pin,omitempty"`
+}
