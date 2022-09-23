@@ -29,3 +29,7 @@ type GetAttLogResponse struct {
 type GetUserInfoResponse struct {
 	DefaultResponseField
 }
+
+type SetUserInfoResponse struct {
+	DefaultResponseField
+}

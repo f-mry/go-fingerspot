@@ -32,3 +32,17 @@ func (c *Client) GetUserInfo(request GetUserInfoRequest) (GetUserInfoResponse, e
 	}
 	return response, nil
 }
+
+func (c *Client) SetUserInfo(request SetUserInfoRequest) (SetUserInfoResponse, error) {
+	response := SetUserInfoResponse{}
+	data, err := json.Marshal(&request)
+	req := bytes.NewBuffer(data)
+	if err != nil {
+		return response, err
+	}
+	err = c.Call(SetUserInfoURL, req, &response)
+	if err != nil {
+		return response, err
+	}
+	return response, nil
+}
