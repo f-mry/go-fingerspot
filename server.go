@@ -95,6 +95,16 @@ func decodeMessage(rawMessage []byte, data map[string]interface{}) interface{} {
 			}
 		}
 		return message
+	case "delete_userinfo":
+		message := new(DeleteUserInfoMessage)
+		err := json.Unmarshal(rawMessage, message)
+		if err != nil {
+			return Err{
+				ErrorCode: "webhook decode casting",
+				Message:   err.Error(),
+			}
+		}
+		return message
 	default:
 		return data
 	}

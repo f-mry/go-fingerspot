@@ -4,6 +4,8 @@ type SwitchDemux struct {
 	All            func(message interface{})
 	RealtimeAttlog func(message *RealtimeAttLogMessage)
 	GetUserInfo    func(message *GetUserInfoMessage)
+	SetUserInfo    func(message *SetUserInfoMessage)
+	DeleteUserInfo func(message *DeleteUserInfoMessage)
 	Other          func(message interface{})
 }
 
@@ -26,5 +28,4 @@ func (s SwitchDemux) Handle(message interface{}) {
 	default:
 		s.Other(msg)
 	}
-
 }

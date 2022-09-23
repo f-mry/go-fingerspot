@@ -45,3 +45,13 @@ type SetUserInfoMessage struct {
 		Status int `json:"status"`
 	} `json:"data"`
 }
+
+type DeleteUserInfoMessage struct {
+	DefaultMessage
+	Data struct {
+		//Status respon dari mesin.
+		//1: user info berhasil ditambahkan ke mesin,
+		//2: user info gagal ditambahkan
+		Status int `json:"status"`
+	} `json:"data"`
+}
